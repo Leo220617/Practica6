@@ -1,0 +1,83 @@
+<div class="row">
+    <div class="eleven column" style="margin-top: 10%">
+     <h2>{{title}}</h2>
+      {{#book}}
+      <form>
+        <div class="row">
+          <div class="six columns">
+           <label for="nameInput">Title</label>
+           <input class="u-full-width" type="text" name="title" {{#show}} readonly {{/show}}
+              id="title" value="{{title}}">
+          </div>
+          <div class="six columns">
+           <label for="degreeInput">Edition</label>
+           <input class="u-full-width" type="text" name="edition" {{#show}} readonly {{/show}}
+              id="edition" value="{{edition}}">
+          </div>
+         </div>
+         <div class="row">
+          <div class="six columns">
+           <label for="emailInput">Copyright</label>
+           <input class="u-full-width" type="text" name="copyright" {{#show}} readonly {{/show}}
+              id="copyright" value="{{copyright}}">
+          </div>
+          <div class="six columns">
+           <label for="language">Language</label>
+           <input class="u-full-width" type="text" name="language" {{#show}} readonly {{/show}}
+             id="language" value="{{language}}">
+          </div>
+          <div class="row">
+             <div class="six columns">
+              <label for="pages">Pages</label>
+              <input class="u-full-width" type="text" name="pages" {{#show}} readonly {{/show}}
+                 id="pages" value="{{pages}}">
+             </div>
+             <div class="six columns">
+              <label for="author">Author</label>
+              <input class="u-full-width" type="text" name="author" {{#show}} readonly {{/show}}
+                id="author" value="{{author}}">
+             </div>
+          </div>
+          <div class="row">
+            <div class="six columns">
+             <label for="author_id">Author_id</label>
+             <input class="u-full-width" type="number" 
+                name="author_id"  {{#show}} readonly {{/show}}
+                id="author_id" value="{{author_id}}">
+            </div>
+            <div class="six columns">
+             <label for="publisher">Publisher</label>
+             <input class="u-full-width" type="text"
+               name="publisher" {{#show}} readonly {{/show}}
+               id="publisher" value="{{publisher}}">
+            </div>
+           </div>
+           <div class="row">
+            <div class="six columns">
+             <label for="publisher_id">publisher_id</label>
+             <input class="u-full-width" type="number" 
+                name="publisher_id"  {{#show}} readonly {{/show}}
+                id="publisher_id" value="{{publisher_id}}">
+            </div>
+            <div class="six columns">
+            
+            </div>
+           </div>
+
+
+       <!--Aca comienza los botones-->
+       <a class="button button-primary" href="/book"
+       data-navigo>Back</a>
+      {{#edit}}
+      <a class="button button-primary" style="float: right" 
+        data-navigo href="/book/update/{{id}}">Update</a>
+    {{/edit}}
+      {{#create}}
+     <input type="hidden" name="_method" value="PUT">
+      <a class="button button-primary" style="float: right" 
+        data-navigo href="/book/store">Create</a>
+    {{/create}}
+      {{/book}}
+     </form>
+    </div>
+   </div>

@@ -1,0 +1,35 @@
+<div class="row">
+    <div style="margin-top: 10%">
+      <h2>{{title}}</h2>
+      <table><thead>
+       <tr><th>Title</th>
+        <th>Edition</th><th>Copyright</th>
+        <th>Language</th><th>Pages</th>
+        <th>Author</th>
+        <th>Publisher</th>
+        <th>Action</th>
+       </tr>
+       </thead><tbody>
+       {{#books}}
+       <tr>
+  
+        <td> {{title}}</td>
+        <td>{{edition}}</td>
+        <td>{{copyright}}</td>
+        <td> {{language}} </td>
+        <td> {{pages}} </td>
+        <td> {{author}} </td>
+      
+        <td> {{publisher}} </td>
+               <td>
+                 <a class="button" href="/book/show/{{id}}" data-navigo>Show</a>
+                 <a class="button" href="/book/edit/{{id}}" data-navigo>Edit</a>
+                 <a class="button" href="/book/delete/{{id}}" data-navigo>Erase</a>
+            
+                 </td>
+               </tr>
+       {{/books}}</tbody>
+      </table>
+      <a class="button button-primary" href="/book/create" data-navigo>New</a>
+    </div>
+   </div>
